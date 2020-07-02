@@ -11,8 +11,11 @@ http://<project host:port>/admin
 
 API
 	list all api
+
 	$ curl -H "Content-type: application/json" -H 'Authorization: Token <user token from admin>' 'http://127.0.0.1:8000/'
+
 	create review
+
 	$ curl -XPOST -H "Content-type: application/json" -H 'Authorization: Token <user token from admin>' -d '{
    	 "rating": 4,
    	 "title": "My first review",
@@ -22,8 +25,12 @@ API
        	 "description": "buster"
 	    }
 	 }' 'http://127.0.0.1:8000/review/'	
+
 	list all reviews create by the user
+
+
 	$ curl -H "Content-type: application/json" -H 'Authorization: Token <user token from admin>' 'http://127.0.0.1:8000/review/'
+
 	[{
     "rating":5,
     "title":"My second review",
